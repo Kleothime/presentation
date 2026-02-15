@@ -807,6 +807,116 @@ html, body {
 }
 
 /* ========================
+   IMAGES
+   ======================== */
+
+/* Banner image (full width) */
+.slide-img-banner {
+    width: 100%;
+    max-height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(108, 99, 255, 0.15);
+}
+
+.banner-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.arrest-banner .banner-img {
+    object-position: center 20%;
+    height: 180px;
+}
+
+/* Image row (thumbnails) */
+.img-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.img-row.three-col {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.img-thumb {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(108, 99, 255, 0.15);
+    background: var(--surface);
+    transition: border-color 0.3s;
+}
+
+.img-thumb:hover {
+    border-color: rgba(108, 99, 255, 0.4);
+}
+
+.img-thumb img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+}
+
+.img-thumb span {
+    display: block;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Card image (inside a card) */
+.card-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+
+/* Portrait layout (Slide 2) */
+.slide-with-portrait {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.portrait-side {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.portrait-img {
+    width: 140px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 71, 87, 0.4);
+    display: block;
+}
+
+.portrait-caption {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.portrait-content {
+    flex: 1;
+}
+
+/* ========================
    RESPONSIVE
    ======================== */
 @media (max-width: 900px) {
@@ -832,6 +942,32 @@ html, body {
 
     .associates-grid {
         grid-template-columns: 1fr;
+    }
+
+    .img-row {
+        grid-template-columns: 1fr;
+    }
+
+    .img-row.three-col {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .slide-with-portrait {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .portrait-img {
+        width: 100px;
+        height: 120px;
+    }
+
+    .slide-img-banner {
+        max-height: 150px;
+    }
+
+    .banner-img {
+        height: 150px;
     }
 
     .timeline-horizontal {
