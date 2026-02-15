@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="presentation">
+        <!-- Slide 1 : Titre -->
+        <section class="slide active" id="slide-0">
+            <div class="slide-content title-slide">
+                <h1>Titre de la présentation</h1>
+                <p class="subtitle">Sous-titre</p>
+                <p class="author">Présenté par — 16 février 2026</p>
+            </div>
+        </section>
+
+        <!-- Slide 2 : Placeholder -->
+        <section class="slide" id="slide-1">
+            <div class="slide-content">
+                <h2>Sommaire</h2>
+                <ul>
+                    <li>Point 1</li>
+                    <li>Point 2</li>
+                    <li>Point 3</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-bar">
+        <button id="prev-btn" class="nav-btn" aria-label="Slide précédente">&#8592;</button>
+        <span class="slide-counter"><span id="current">1</span> / <span id="total">2</span></span>
+        <button id="next-btn" class="nav-btn" aria-label="Slide suivante">&#8594;</button>
+    </div>
+
+    <!-- Indicateur de progression -->
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
